@@ -3,7 +3,6 @@ import json
 from datetime import datetime
 import csv
 
-
 parser = argparse.ArgumentParser(description="Log Analyzer CLI")
 
 parser.add_argument("-file", required=True, help="Path to log file")
