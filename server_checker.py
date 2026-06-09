@@ -3,16 +3,15 @@ import time
 
 session = requests.Session()
 
+
 def check_server(url):
     for attempt in range(2):  # retry twice
         try:
             start = time.time()
-
             response = session.get(url, timeout=5)
 
             end = time.time()
             response_time = int((end - start) * 1000)
-
             status = "OK"
 
             if response.status_code >= 400:
